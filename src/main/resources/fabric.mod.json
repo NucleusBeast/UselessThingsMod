@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "ut",
+  "id": "uselessthings",
   "version": "${version}",
 
   "name": "Useless Things",
@@ -14,7 +14,7 @@
   },
 
   "license": "MIT",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/uselessthings/icon.png",
 
   "environment": "*",
   "entrypoints": {
