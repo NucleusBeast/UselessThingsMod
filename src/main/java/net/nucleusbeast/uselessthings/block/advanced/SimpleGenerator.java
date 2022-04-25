@@ -4,18 +4,11 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.nucleusbeast.uselessthings.UselessThings;
 import net.nucleusbeast.uselessthings.blockentity.ModBlockEntity;
 import net.nucleusbeast.uselessthings.blockentity.SimpleGeneratorEntity;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.Objects;
 
 public class SimpleGenerator extends BlockWithEntity implements BlockEntityProvider {
     public SimpleGenerator(Settings settings) {

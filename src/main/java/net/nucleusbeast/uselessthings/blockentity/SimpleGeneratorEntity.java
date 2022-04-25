@@ -13,7 +13,7 @@ public class SimpleGeneratorEntity extends BlockEntity{
 
     private static final int capacity = 10000;
     private static final int maxExtract = 100;
-    private static final int generating = 100;
+    private static final int generating = 10;
 
     SimpleEnergyStorage energy = new SimpleEnergyStorage(capacity, maxExtract, generating);
 
@@ -24,6 +24,7 @@ public class SimpleGeneratorEntity extends BlockEntity{
     static int tickable = 0;
 
     public static void tick(World world, BlockPos pos, BlockState state, SimpleGeneratorEntity be) {
+        if (!world.isReceivingRedstonePower(pos)) return;
         if (!world.isClient && (be.energy.amount < 10000)) {
             if (tickable != 20){
                 tickable += 1;

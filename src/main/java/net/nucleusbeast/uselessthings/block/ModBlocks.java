@@ -16,7 +16,7 @@ public class ModBlocks {
 
     //Adding glocks:
     public static final Block SIMPLE_GENERATOR = registerBlock("simple_generator",
-            new SimpleGenerator(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool().luminance(4)), ItemGroup.MISC);
+            new SimpleGenerator(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool().luminance(4)), ItemGroup.REDSTONE);
 
 
     //Methods:

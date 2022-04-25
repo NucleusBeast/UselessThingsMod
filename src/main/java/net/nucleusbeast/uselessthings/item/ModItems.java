@@ -17,14 +17,15 @@ public class ModItems {
     public static final Item NUCLEUS_CORE = registerItem("nucleus_core", new Item(new FabricItemSettings().group(ItemGroup.MISC)));
     public static final Item PEARL_SHARD = registerItem("pearl_shard", new Item(new FabricItemSettings().group(ItemGroup.MISC)));
     public static final Item MAJESTIC_STICK = registerItem("majestic_stick", new MajesticStick(new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+    public static final Item USELESS_INGOT = registerItem("useless_ingot", new Item(new FabricItemSettings().group(ItemGroup.MISC)));
 
     //Adding tools:
     public static final Item DUSTY_PICKAXE = registerItem("dusty_pickaxe", new ModPickaxeItem
-            (ModToolMaterial.MATERIAL, 1, 1f, new FabricItemSettings().group(ItemGroup.MISC)));
+            (ModToolMaterial.MATERIAL, 1, 1f, new FabricItemSettings().group(ItemGroup.TOOLS)));
     public static final Item RUSTY_SHOWEL = registerItem("rusty_showel", new ModShovelItem
-            (ModToolMaterial.MATERIAL, 1, 1f,new FabricItemSettings().group(ItemGroup.MISC)));
+            (ModToolMaterial.MATERIAL, 1, 1f,new FabricItemSettings().group(ItemGroup.TOOLS)));
     public static final Item DULL_AXE = registerItem("dull_axe", new ModAxeItem
-            (ModToolMaterial.MATERIAL, 5, 3f, new FabricItemSettings().group(ItemGroup.MISC)));
+            (ModToolMaterial.MATERIAL, 5, 3f, new FabricItemSettings().group(ItemGroup.TOOLS)));
 
     //Functions:
     private static Item registerItem(String name, Item item){
