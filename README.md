@@ -2,7 +2,7 @@
 
 ## About
 
-You can learn more about this mod on [wiki]()
+You can learn more about this mod on [wiki](https://github.com/NucleusBeast/UselessThingsMod-1.18.2/wiki)
 
 ## License
 
