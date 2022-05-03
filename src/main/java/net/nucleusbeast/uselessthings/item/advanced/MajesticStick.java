@@ -13,17 +13,17 @@ import java.util.Random;
 
 public class MajesticStick extends Item {
 
-    List<String> message = TextFile.message;
+    List<String> message;
 
     public MajesticStick(Settings settings) {
         super(settings);
+        message = TextFile.Load();
     }
 
 
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
-
         if (context.getWorld().isClient()){
             PlayerEntity player = context.getPlayer();
             if (player != null){
