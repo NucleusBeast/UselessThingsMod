@@ -1,10 +1,9 @@
 package net.nucleusbeast.uselessthings.item.advanced;
 
-import net.minecraft.entity.boss.BossBar;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.nucleusbeast.uselessthings.util.TextFile;
 
@@ -31,10 +30,10 @@ public class MajesticStick extends Item {
                 int roll = rand.nextInt(message.size());
                 if (message.get(roll).contains("%player%")){
                     int index =  message.get(roll).indexOf("%");
-                    player.sendMessage(new LiteralText(message.get(roll).substring(0, index) + player.getName().asString() + message.get(roll).substring(index + 8)), false);
+                    player.sendMessage(Text.literal(message.get(roll).substring(0, index) + player.getName().toString() + message.get(roll).substring(index + 8)), false);
                 }
                 else{
-                    player.sendMessage(new LiteralText(message.get(roll)), false);
+                    player.sendMessage(Text.literal(message.get(roll)), false);
                 }
             }
         }

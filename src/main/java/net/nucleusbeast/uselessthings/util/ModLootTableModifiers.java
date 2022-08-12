@@ -1,7 +1,7 @@
 package net.nucleusbeast.uselessthings.util;
 
-import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
@@ -24,77 +24,77 @@ public class ModLootTableModifiers {
     private static final Identifier SPRUCE_LEAVES = new Identifier("minecraft", "blocks/spruce_leaves");
 
     public static void modifyLootTables(){
-        LootTableLoadingCallback.EVENT.register((((resourceManager, manager, id, supplier, setter) -> {
+        LootTableEvents.MODIFY.register((((resourceManager, manager, id, supplier, setter) -> {
             if (ACACIA_LEAVES.equals(id)){
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.01f)) //drops 1% of the time
                         .with(ItemEntry.builder(ModItems.MAJESTIC_STICK))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.withPool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.pool(poolBuilder.build());
             }
 
             if (AZALEA_LEAVES.equals(id)){
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.01f)) //drops 1% of the time
                         .with(ItemEntry.builder(ModItems.MAJESTIC_STICK))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.withPool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.pool(poolBuilder.build());
             }
 
             if (BIRCH_LEAVES.equals(id)){
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.01f)) //drops 1% of the time
                         .with(ItemEntry.builder(ModItems.MAJESTIC_STICK))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.withPool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.pool(poolBuilder.build());
             }
 
             if (DARK_OAK_LEAVES.equals(id)){
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.01f)) //drops 1% of the time
                         .with(ItemEntry.builder(ModItems.MAJESTIC_STICK))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.withPool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.pool(poolBuilder.build());
             }
 
             if (JUNGLE_LEAVES.equals(id)){
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.01f)) //drops 1% of the time
                         .with(ItemEntry.builder(ModItems.MAJESTIC_STICK))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.withPool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.pool(poolBuilder.build());
             }
 
             if (FLOWERTING_AZALEA_LEAVES.equals(id)){
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.01f)) //drops 1% of the time
                         .with(ItemEntry.builder(ModItems.MAJESTIC_STICK))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.withPool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.pool(poolBuilder.build());
             }
 
             if (OAK_LEAVES.equals(id)){
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.01f)) //drops 1% of the time
                         .with(ItemEntry.builder(ModItems.MAJESTIC_STICK))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.withPool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.pool(poolBuilder.build());
             }
 
             if (SPRUCE_LEAVES.equals(id)){
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.01f)) //drops 1% of the time
                         .with(ItemEntry.builder(ModItems.MAJESTIC_STICK))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.withPool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.pool(poolBuilder.build());
             }
         } )));
     }
