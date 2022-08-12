@@ -1,5 +1,6 @@
 package net.nucleusbeast.uselessthings.block;
 
+import com.mojang.serialization.Decoder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -10,13 +11,13 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.nucleusbeast.uselessthings.UselessThings;
-import net.nucleusbeast.uselessthings.block.advanced.SimpleGenerator;
+import net.nucleusbeast.uselessthings.block.simplegenerator.SimpleGenerator;
 
 public class ModBlocks {
 
     //Adding glocks:
     public static final Block SIMPLE_GENERATOR = registerBlock("simple_generator",
-            new SimpleGenerator(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool().luminance(4)), ItemGroup.REDSTONE);
+            new SimpleGenerator(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool().luminance((state) -> state.get(SimpleGenerator.ACTIVE) ? 8 : 0)), ItemGroup.REDSTONE);
 
 
     //Methods:
